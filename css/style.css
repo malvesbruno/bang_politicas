@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'pixel';
-    src: url('/assets/fonts/ari-w9500.ttf');
+    src: url('assets/fonts/ari-w9500.ttf');
 }
 
 body{
@@ -19,7 +19,7 @@ body{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/assets/imgs/d4b792e1-21a4-4e39-86bb-36925f1a60b6.png');
+    background: url('assets/imgs/d4b792e1-21a4-4e39-86bb-36925f1a60b6.png');
     filter: brightness(0.5) blur(1px);
     z-index: 0;
     
