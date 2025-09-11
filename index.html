@@ -21,12 +21,23 @@
     <div class="floating-button">
         <button onclick="openMenu()" id="button_menu">☰</button>
     </div>
+    <div class="floating-button scrollspy">
+        <button onclick="goTotop()" id="scrollspy">Δ</button>
+    </div>
     <div class="bg">
     </div>
     <div class="sand">
-        <video src="assets/videos/sand.webm" width="100%" autoplay loop preload="auto" id="sand"></video>
+        <video src="assets/videos/sand.webm" width="100%" autoplay loop preload="auto" id="sand" muted playsinline></video>
         <img src="assets/imgs/d4b792e1-21a4-4e39-86bb-36925f1a60b6.png" width="100%" alt="">
     </div>
+    <script>
+        let sand = document.getElementById('sand');
+
+        sand.play().catch(err => {
+        console.log("Autoplay bloqueado. Tocando ao interagir...");
+        document.body.addEventListener("click", () => video.play(), { once: true });
+        });
+    </script>
     <div class="shade">
         <nav>
             <img src="assets/imgs/icon.png" alt="icon" height="100%">
@@ -36,95 +47,96 @@
             <a href="#historia" onclick="playClick()">História</a>
             <a href="#Politicas" onclick="playClick()">Politicas</a>
         </nav>
+        <div id="inicio"></div>
         <div 
-        class="apresentacao">
+        class="apresentacao invisible">
         <div class="cinema">
-            <video src="assets/videos/duelo.mp4" id="video" height="50%" width="60%" preload="auto" muted playsinline ></video>
+            <video src="assets/videos/duelo.mp4" id="video" height="50%" width="60%" preload="auto" muted playsinline autoplay ></video>
         </div>
         <h1 class="fraseImpacto">Um duelo. Uma chance.<br> Você é rápido o bastante?</h1>
     </div>
     <div class="personagens">
         <h1 class="titulo" id="Personagens">Personagens</h1>
-        <div class="tabua">
+        <div class="tabua invisible">
             <audio src="assets/audio/whoosh.wav" preload="auto" id="posterWhoosh"></audio>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar1.png"
                 onmouseover="playWhoosh()" 
                 onclick="goToPage({name: 'Homem Sem Nome'})"
                 alt="">
                 <p>Homem Sem Nome</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar2.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Angel'})">
                 <p>Angel</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar3.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Homem de Preto'})">
                 <p>Homem de Preto</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar4.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Mira de Prata'})">
                 <p>Mira de Prata</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar5.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Cachorro Urubu'})">
                 <p>Cachorro Urubu</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar6.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Madame Víbora'})">
                 <p>Madame Víbora</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar7.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Relâmpago do Deserto'})">
                 <p>Relâmpago do Deserto</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar8.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Estrela Veloz'})">
                 <p>Estrela Veloz</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar9.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Viúva de Fogo'})">
                 <p>Viúva de Fogo</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar10.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'Última Sombra'})">
                 <p>Última Sombra</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar11.png"
                 onmouseover="playWhoosh()"
                 alt=""
                 onclick="goToPage({name:'O Homem Estranho'})">
                 <p>O Homem Estranho</p>
             </div>
-            <div class="poster">
+            <div class="poster invisible">
                 <img src="assets/imgs/avatar12.png"
                 onmouseover="playWhoosh()"
                 alt=""
@@ -133,7 +145,7 @@
             </div>
         </div>
     </div>
-    <div class="historia">
+    <div class="historia invisible">
         <h1 class="titulo" id="historia">História</h1>
         <div class="pagina">
             <audio src="assets/audio/typeWrite.mp3" preload="auto" id="typewrite"></audio>
@@ -141,19 +153,20 @@
             </pre>
         </div>
     </div>
-    <div class="download">
-            <h1 class="titulo" id="Download">Download</h1>
-            <h2>Em breve na playStore</h2>
-            <img src="assets/imgs/playStore.png" alt="PlayStore" width="30%">
+    <div class="download invisible">
+            <h1 class="titulo noAnimation invisible delay" id="Download">Download</h1>
+            <h2 class="noAnimation invisible delay">Em breve na playStore</h2>
+            <img class="invisible delay" src="assets/imgs/playStore.png" alt="PlayStore" width="30%">
             <br>
-            <h2>Teste Agora</h2>
-            <button onclick="playClick()">Download</button>
+            <h2 class="invisible delay">Teste Agora</h2>
+            <button onclick="playClick()" class="invisible delay">Download</button>
         </div>
-    <div class="politicas">
+    <div class="politicas invisible">
             <h1 class="titulo" id="Politicas">Politicas</h1>
             <h2>Edital do Xerife — Regras e Políticas da Cidade</h2>
             <h2><a href="politicas.html">Clique aqui</a> para ver nossas politicas</h2>
     </div>
     <script src="script/main.js" ></script>
+    <script src="script/animation.js" ></script>
 </body>
 </html>

@@ -42,13 +42,14 @@
         </div>
         <h1 id="ola">ola
         </h1>
-    <div class="historia">
+    <div class="historia" id="historiaAnimation">
         <div class="pagina_poster">
             <audio src="assets/audio/typeWrite.mp3" preload="auto" id="typewrite"></audio>
             <pre id="lore">
             </pre>
         </div>
     </div>
+    <div class="expanderMobile"></div>
     <script>
         const params = new URLSearchParams(window.location.search);
         const name = params.get('nome')

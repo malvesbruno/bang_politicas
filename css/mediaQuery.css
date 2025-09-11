@@ -3,12 +3,21 @@
         overflow-x:unset;
     }
 
+    .expanderMobile{
+        width: 100%;
+        height: 200px;
+    }
+
     .shade{
         width: 100%;
     }
 
     .shade nav{
         display: none;
+    }
+
+    .tabua .poster:hover{
+        transform: scale(1.05);
     }
 
     .cinema{
@@ -18,7 +27,17 @@
     .quadro{
         width: 200px;
         height: 200px;
+        margin-top: 2em;
     }
+
+    .floating-button.scrollspy{
+    position: fixed;
+    top: 5%;
+    right: 50%;
+    transform: translatex(50%);
+    z-index: 9999;
+    display: block;
+}
 
     .cinema video{
         height: 200px;
@@ -59,6 +78,7 @@
     text-decoration: none;
     font-family: 'pixel';
     text-align: left;
+    border-radius: 10px;
     }
 
     .menu_open button{
@@ -96,6 +116,10 @@
         display: none;
     }
 
+    .expanderMobile{
+        width: 100%;
+        height: 200px;
+    }
     
 
     .cinema{
@@ -105,6 +129,11 @@
     .quadro{
         width: 200px;
         height: 200px;
+        margin-top: 2em;
+    }
+
+    .tabua .poster:hover{
+        transform: scale(1.05);
     }
 
     .cinema video{
@@ -124,6 +153,14 @@
         display: block;
     }
 
+    .floating-button.scrollspy{
+    position: fixed;
+    top: 5%;
+    right: 50%;
+    transform: translatex(50%);
+    z-index: 9999;
+    display: block;
+}
 
     .menu_open{
         display: none;
@@ -146,6 +183,7 @@
     text-decoration: none;
     font-family: 'pixel';
     text-align: left;
+    border-radius: 10px;
     }
 
     .menu_open button{
@@ -171,6 +209,11 @@
         height: 100%;
         width: 100vw;
         object-fit: cover;
+    }
+
+    .expanderMobile{
+        width: 100%;
+        height: 200px;
     }
 
     .sand img{
@@ -209,9 +252,23 @@
         width: 90%;
     }
 
+    .tabua .poster:hover{
+        transform: scale(1.05);
+    }
+
+    .floating-button.scrollspy{
+    position: fixed;
+    top: 5%;
+    right: 50%;
+    transform: translatex(50%);
+    z-index: 9999;
+    display: block;
+}
+
     .quadro{
         width: 200px;
         height: 200px;
+        margin-top: 2em;
     }
 
     .cinema video{
@@ -253,6 +310,7 @@
     text-decoration: none;
     font-family: 'pixel';
     text-align: left;
+    border-radius: 10px;
     }
 
     .menu_open button{

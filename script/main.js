@@ -3,12 +3,10 @@ let video = document.getElementById("video");
 const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log('Element is now visible:', entry.target);
                 entry.target.pause();
                 entry.target.currentTime = 0; // opcional: reinicia do começo
                 entry.target.play();
             } else {
-                console.log('Element is now hidden:', entry.target);
                 entry.target.pause();
             }
         });
@@ -580,7 +578,6 @@ Anos depois, uma fogueira crepitava sob o céu estrelado. O Cachorro Urubu, sent
 
 — “Então foi assim… ou talvez eu tenha exagerado um pouco. Mas vocês viram? Ou ouviram? Quem sabe a verdade realmente importa? História é como a poeira do deserto, meu amigo: ela dança e some, e a memória decide o que vai ficar.”`
 
-console.log(texto)
 
 const pre = document.getElementById('lore');
 let i = 0;
@@ -588,7 +585,6 @@ let typewriterTimeout;
 let isWriting = false;
 
 const typewrite = document.getElementById('typewrite'); // seu áudio
-console.log(typewrite)
 
 function escrever() {
     if (!isWriting) return; // se estiver pausado, não continua
@@ -605,19 +601,17 @@ function escrever() {
 const observerHistory = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            console.log('Element is now visible:', entry.target);
             pre.textContent = '';
             i = 0;
             isWriting = true;
             escrever();
         } else {
-            console.log('Element is now hidden:', entry.target);
             isWriting = false;
             clearTimeout(typewriterTimeout); // cancela o próximo passo
             typewrite.pause(); // pausa o som
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.8 });
 
 observerHistory.observe(pre);
 
@@ -674,12 +668,15 @@ function goToPage({name}){
 function openMenu(){
     let menu = document.getElementById('menu_open');
     let button = document.getElementById('button_menu');
+    const scrollspy = document.getElementById("scrollspy");
     if (menu.style.display == 'none'){
         menu.style.display = 'flex';
         button.innerHTML = '✕'
+        scrollspy.style.display = 'none';
     } else{
         menu.style.display = 'none'
         button.innerHTML = '☰'
+        scrollspy.style.display ='block'
 
     }
 }
@@ -690,4 +687,27 @@ function closeMenu(){
     let button = document.getElementById('button_menu');
     menu.style.display = 'none'
     button.innerHTML = '☰'
+}
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY; // quanto rolou
+  const windowHeight = window.innerHeight; // altura da tela
+  const documentHeight = document.documentElement.scrollHeight; // altura total
+
+  console.log(`Scroll atual: ${scrollTop}px`);
+
+  // Exemplo: desabilitar botão ao chegar no fim
+  const button = document.getElementById("scrollspy");
+  if (scrollTop < documentHeight/10) {
+    button.style.animation = 'none';
+    button.style.opacity = 0
+  } else {
+    button.style.animation = 'comeDown 0.8s ease-in-out forwards'
+    button.style.opacity = 100
+  }
+});
+
+function goTotop(){
+    let inicio = document.getElementById("inicio")
+    inicio.scrollIntoView({'behavior': 'smooth', 'block': 'end'})
 }
