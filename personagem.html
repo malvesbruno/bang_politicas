@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANG!</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mediaQuery.css" rel="stylesheet">
+    <link rel="icon" href="assets/imgs/icon.png">
+</head>
+<body>
+    <audio src="assets/audio/click.wav" id="click" preload="auto"></audio>
+    
+     <div class="menu_open" id="menu_open">
+        <img src="assets/imgs/icon.png" alt="icon" width="30%" style="margin-bottom: 5em;">
+        <div style="width: 40%;"></div>
+        <a href="index.html#Download" onclick="closeMenu()">Download</a>
+        <a href="index.html#Personagens" onclick="closeMenu()">Personagens</a>
+        <a href="index.html#historia" onclick="closeMenu()">História</a>
+        <a href="index.html#Politicas" onclick="closeMenu()">Politicas</a>
+    </div>
+    <div class="floating-button">
+        <button onclick="openMenu()" id="button_menu">☰</button>
+    </div>
+    <div class="bg">
+    </div>
+    <div class="sand">
+        <video src="assets/videos/sand.webm" width="100%" autoplay loop preload="auto" id="sand"></video>
+        <img src="assets/imgs/d4b792e1-21a4-4e39-86bb-36925f1a60b6.png" width="100%" alt="">
+    </div>
+    <div class="shade">
+        <nav>
+            <img src="assets/imgs/icon.png" alt="icon" height="100%">
+            <div style="width: 40%;"></div>
+            <a href="index.html#Download" onclick="playClick()">Download</a>
+            <a href="index.html#Personagens" onclick="playClick()">Personagens</a>
+            <a href="index.html#historia" onclick="playClick()">História</a>
+            <a href="index.html#Politicas" onclick="playClick()">Politicas</a>
+            <button><img src="assets/imgs/mute.png" id="mute" onclick="stopMusic()"></button>
+        </nav>
+        <div class="quadro">
+            <img src="assets/imgs/avatar2.png" id="avatar" alt="">
+        </div>
+        <h1 id="ola">ola
+        </h1>
+    <div class="historia">
+        <div class="pagina_poster">
+            <audio src="assets/audio/typeWrite.mp3" preload="auto" id="typewrite"></audio>
+            <pre id="lore">
+            </pre>
+        </div>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('nome')
+
+        switch(name){
+            case ('Homem Sem Nome'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar1.png`
+                 document.getElementById('lore').innerHTML = `Ninguém sabe de onde veio, nem pra onde vai. Carrega no olhar a frieza de quem já viu tudo, mas nunca fala sobre o passado. Alguns dizem que já foi fazendeiro, outros juram que era pistoleiro de aluguel. A única certeza é que ele chega, faz justiça à sua maneira e desaparece antes do pôr do sol.`
+                 break
+            }
+            case ('Angel'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar2.png`
+                 document.getElementById('lore').innerHTML = `Conhecida como “o Anjo do Deserto”, sua beleza é tão desarmante quanto sua mira. Muitos a subestimam, achando que é apenas um rosto bonito — até que sentem o peso de sua justiça rápida. Seu sorriso guarda segredos, e dizem que quem cruza seu caminho nunca mais esquece a intensidade de seus olhos.`
+                 break
+            }
+            case ('Homem de Preto'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar3.png`
+                 document.getElementById('lore').innerHTML = `Chamado de "O Baladeiro do Oeste", ele carrega um violão gasto e duas pistolas. Canta canções sobre dor, perda e redenção antes dos duelos. Seu estilo sombrio e sua voz grave ecoam pelos desertos como maldição ou prece. Cada bala que dispara é como uma última nota de uma canção triste.`
+                 break
+            }
+            case ('Mira de Prata'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar4.png`
+                 document.getElementById('lore').innerHTML = `Desde pequena, derrubava garrafas com estilingue a dezenas de metros. Aos 12, já era considerada a melhor atiradora da região. Cresceu ouvindo que mulheres não tinham lugar no Oeste, mas cada duelo vencido provou o contrário. Hoje, “Mira de Prata” é conhecida como a mais jovem e mortal pistoleira.`
+                 break
+            }
+            case ('Cachorro Urubu'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar5.png`
+                 document.getElementById('lore').innerHTML = `Um andarilho excêntrico que mistura poesia, filosofia e pólvora. Usa roupas surradas, gargalha como um louco e cita versos enigmáticos. Alguns dizem que é profeta, outros que é só mais um bêbado. Mas quando sua pistola canta, não há poesia mais certeira que a sua bala. (“Eu devia estar contente…” — costuma murmurar antes dos tiros).`
+                 break
+            }
+            case ('Madame Víbora'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar6.png`
+                 document.getElementById('lore').innerHTML = `Dona do bordel mais famoso do Oeste. Atrás do charme, guarda segredos e um arsenal escondido. Sua cadeira e a shotgun são símbolos de poder: quem entra em seu salão respeita as regras ou sai carregado. Sedutora e cruel quando precisa, é temida tanto quanto amada.`
+                 break
+            }
+            case ('Relâmpago do Deserto'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar7.png`
+                 document.getElementById('lore').innerHTML = `Dizem que nasceu sobre a sela e nunca parou de cavalgar. Seu cavalo é tão rápido quanto o vento, e juntos são imparáveis. Em meio à poeira, ele atira sem errar, como se fosse um só com a montaria. Nenhum xerife conseguiu alcançá-lo.`
+                 break
+            }
+            case ('Estrela Veloz'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar8.png`
+                 document.getElementById('lore').innerHTML = `A melhor cavaleira do Oeste. Criada em terras selvagens, aprendeu a montar antes mesmo de andar. Seu cavalo é sua alma gêmea, e sua arma, uma extensão de suas mãos. Quando a poeira sobe no horizonte, todos sabem que “Estrela Veloz” está chegando.`
+                 break
+            }
+            case ('Viúva de Fogo'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar9.png`
+                 document.getElementById('lore').innerHTML = `Depois de perder o marido em uma emboscada, jurou vingança. Desde então, caça cada bandido que cruza seu caminho, sem piedade. Usa um sobretudo de couro que pertencia a ele, e a cada bala disparada sente que se aproxima da redenção. O Oeste a teme, mas ninguém ousa enfrentá-la de frente.`
+            }
+            case ('Última Sombra'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar10.png`
+                 document.getElementById('lore').innerHTML = `Um cowboy solitário que sempre parte antes do amanhecer. Nunca fica em uma cidade por muito tempo, como se carregasse um destino que não pode compartilhar. Muitos acreditam que ele está condenado a vagar sem descanso, andando sempre em direção ao horizonte. É lembrado apenas como uma sombra que se afasta.`
+                 break
+            }
+            case ('O Homem Estranho'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar11.png`
+                 document.getElementById('lore').innerHTML = `Ninguém sabe se ele nasceu de uma mãe ou se foi parido pelas sombras do deserto. Alguns juram que já o viram em batalhas antigas, outros dizem que ele é eterno, vagando sem nunca envelhecer. Sua figura é sempre a mesma: um homem encoberto, olhos brilhando como carvões acesos, cavalgando uma montaria igualmente espectral.
+
+Não fala. Não precisa. O som de seus cascos é suficiente para gelar o sangue dos mais bravos. Onde o Homem Estranho aparece, a vida definha: colheitas secam, gado some, e os homens caem mortos sem que se saiba de quê. É como se a própria terra rejeitasse sua presença.
+
+Alguns acreditam que ele é a Morte em carne e osso, vagando em busca de almas perdidas. Outros, que é um pistoleiro condenado, amaldiçoado a cavalgar até que o Oeste não seja mais nada além de pó. Há até quem diga que ele surge quando o equilíbrio é quebrado, como prenúncio de guerras ou tragédias.
+
+Ninguém nunca sobreviveu a um duelo contra ele — e os poucos que afirmam tê-lo visto de perto carregam cicatrizes na alma, não no corpo.
+
+No Oeste, seu nome não é dito em voz alta. Só o chamam de uma coisa:
+O Homem Estranho.`
+                 break
+            }
+            case ('Águia Caindo'):{
+                document.getElementById('ola').innerHTML = `${name}`
+                 document.getElementById('avatar').src = `assets/imgs/avatar12.png`
+                 document.getElementById('lore').innerHTML = `Dizem que ele não é apenas um homem, mas o espírito de um cacique ancestral que voltou para proteger as terras do Oeste. Monta sempre com a dignidade de um rei e o silêncio de um fantasma. Seu nome vem de uma visão: uma águia flamejante que caía dos céus para se sacrificar e proteger seu povo.
+
+Reza a lenda que, quando os ventos mudam e a poeira cobre o horizonte, o Águia Caindo aparece. Seu cavalo pisa leve como se não fosse deste mundo, e seus olhos refletem o fogo da águia celestial. Uns acreditam que ele é um guardião enviado para manter o equilíbrio entre a destruição dos pistoleiros e a vida que ainda resiste. Outros sussurram que ele é a última esperança contra a escuridão que se espalha no deserto.
+
+No Oeste, onde morte e pólvora reinam, poucos são temidos… mas só um é reverenciado como protetor e maldição ao mesmo tempo: o Águia Caindo`
+                 break
+            }
+        }
+        
+        function stopMusic(){
+        let audio =  document.getElementById("audio");
+        let mute = document.getElementById('mute');
+        if (!audio.paused && audio.currentTime > 0 && !audio.ended){
+            mute.src = "assets/imgs/sound.png";
+            playClick()
+            audio.pause();
+        } else{
+            mute.src = "assets/imgs/mute.png";
+            playClick()
+            audio.play()
+        }
+}
+
+function playClick(){
+    let whoosh = document.getElementById('click');
+    whoosh.volume = 0.2
+    whoosh.pause()
+    whoosh.currentTime=0
+    whoosh.play()
+}
+
+function openMenu(){
+    let menu = document.getElementById('menu_open');
+    let button = document.getElementById('button_menu');
+    if (menu.style.display == 'none'){
+        menu.style.display = 'flex';
+        button.innerHTML = '✕'
+    } else{
+        menu.style.display = 'none'
+        button.innerHTML = '☰'
+
+    }
+}
+
+function closeMenu(){
+    playClick()
+    let menu = document.getElementById('menu_open');
+    let button = document.getElementById('button_menu');
+    menu.style.display = 'none'
+    button.innerHTML = '☰'
+}
+    </script>
+</body>
+</html>

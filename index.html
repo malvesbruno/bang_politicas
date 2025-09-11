@@ -5,13 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BANG!</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/mediaQuery.css" rel="stylesheet">
     <link rel="icon" href="assets/imgs/icon.png">
 </head>
 <body>
-    <div class="bg"></div>
-    <div class="shade">
-        
+    <audio src="assets/audio/click.wav" id="click" preload="auto"></audio>
+    <div class="menu_open" id="menu_open">
+        <img src="assets/imgs/icon.png" alt="icon" width="30%" style="margin-bottom: 5em;">
+        <div style="width: 40%;"></div>
+        <a href="#Download" onclick="closeMenu()">Download</a>
+        <a href="#Personagens" onclick="closeMenu()">Personagens</a>
+        <a href="#historia" onclick="closeMenu()">História</a>
+        <a href="#Politicas" onclick="closeMenu()">Politicas</a>
     </div>
-    
+    <div class="floating-button">
+        <button onclick="openMenu()" id="button_menu">☰</button>
+    </div>
+    <div class="bg">
+    </div>
+    <div class="sand">
+        <video src="assets/videos/sand.webm" width="100%" autoplay loop preload="auto" id="sand"></video>
+        <img src="assets/imgs/d4b792e1-21a4-4e39-86bb-36925f1a60b6.png" width="100%" alt="">
+    </div>
+    <div class="shade">
+        <nav>
+            <img src="assets/imgs/icon.png" alt="icon" height="100%">
+            <div style="width: 40%;"></div>
+            <a href="#Download" onclick="playClick()">Download</a>
+            <a href="#Personagens" onclick="playClick()">Personagens</a>
+            <a href="#historia" onclick="playClick()">História</a>
+            <a href="#Politicas" onclick="playClick()">Politicas</a>
+        </nav>
+        <div 
+        class="apresentacao">
+        <div class="cinema">
+            <video src="assets/videos/duelo.mp4" id="video" height="50%" width="60%" preload="auto" muted playsinline ></video>
+        </div>
+        <h1 class="fraseImpacto">Um duelo. Uma chance.<br> Você é rápido o bastante?</h1>
+    </div>
+    <div class="personagens">
+        <h1 class="titulo" id="Personagens">Personagens</h1>
+        <div class="tabua">
+            <audio src="assets/audio/whoosh.wav" preload="auto" id="posterWhoosh"></audio>
+            <div class="poster">
+                <img src="assets/imgs/avatar1.png"
+                onmouseover="playWhoosh()" 
+                onclick="goToPage({name: 'Homem Sem Nome'})"
+                alt="">
+                <p>Homem Sem Nome</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar2.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Angel'})">
+                <p>Angel</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar3.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Homem de Preto'})">
+                <p>Homem de Preto</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar4.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Mira de Prata'})">
+                <p>Mira de Prata</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar5.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Cachorro Urubu'})">
+                <p>Cachorro Urubu</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar6.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Madame Víbora'})">
+                <p>Madame Víbora</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar7.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Relâmpago do Deserto'})">
+                <p>Relâmpago do Deserto</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar8.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Estrela Veloz'})">
+                <p>Estrela Veloz</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar9.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Viúva de Fogo'})">
+                <p>Viúva de Fogo</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar10.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Última Sombra'})">
+                <p>Última Sombra</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar11.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'O Homem Estranho'})">
+                <p>O Homem Estranho</p>
+            </div>
+            <div class="poster">
+                <img src="assets/imgs/avatar12.png"
+                onmouseover="playWhoosh()"
+                alt=""
+                onclick="goToPage({name:'Águia Caindo'})">
+                <p>Águia Caindo</p>
+            </div>
+        </div>
+    </div>
+    <div class="historia">
+        <h1 class="titulo" id="historia">História</h1>
+        <div class="pagina">
+            <audio src="assets/audio/typeWrite.mp3" preload="auto" id="typewrite"></audio>
+            <pre id="lore">
+            </pre>
+        </div>
+    </div>
+    <div class="download">
+            <h1 class="titulo" id="Download">Download</h1>
+            <h2>Em breve na playStore</h2>
+            <img src="assets/imgs/playStore.png" alt="PlayStore" width="30%">
+            <br>
+            <h2>Teste Agora</h2>
+            <button onclick="playClick()">Download</button>
+        </div>
+    <div class="politicas">
+            <h1 class="titulo" id="Politicas">Politicas</h1>
+            <h2>Edital do Xerife — Regras e Políticas da Cidade</h2>
+            <h2><a href="politicas.html">Clique aqui</a> para ver nossas politicas</h2>
+    </div>
+    <script src="script/main.js" ></script>
 </body>
 </html>

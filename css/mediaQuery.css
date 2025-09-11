@@ -1,0 +1,254 @@
+@media screen and (max-width: 360px) {
+    .shade{
+        width: 100%;
+    }
+
+    .shade nav{
+        display: none;
+    }
+
+    .cinema{
+        width: 100%;
+    }
+
+    .cinema video{
+        height: 300px;
+        width: auto;
+    }
+
+    .fraseImpacto{
+        font-size: 2em;
+    }
+
+    .politicas h2{
+        padding-inline: 2em;
+    }
+
+    .floating-button{
+        display: block;
+    }
+
+
+    .menu_open{
+        display: none;
+    }
+    .menu_open img{
+        border-radius: 20px;
+    }
+
+    .menu_open a{
+        margin-top: 1em;
+    color: white;
+    background-color: #544528;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 2em;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
+    font-family: 'pixel';
+    text-align: left;
+    }
+
+    .menu_open button{
+        background-color: #544528;
+        border-radius: 20px;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu_open button img{
+        height: 40px;
+    }
+
+    .menu_open a:hover{
+    transform: scale(1.1);
+    }
+
+    .tabua .poster img{
+        top: 18%;
+    }
+
+    .tabua .poster p{
+        top: 65%;
+    }
+}
+
+@media screen and (max-width: 433px) {
+    .shade{
+        width: 100%;
+    }
+
+    .shade nav{
+        display: none;
+    }
+
+    .cinema{
+        width: 100%;
+    }
+
+    .cinema video{
+        height: 300px;
+        width: auto;
+    }
+
+    .fraseImpacto{
+        font-size: 2em;
+    }
+
+    .politicas h2{
+        padding-inline: 2em;
+    }
+
+    .floating-button{
+        display: block;
+    }
+
+
+    .menu_open{
+        display: none;
+    }
+    .menu_open img{
+        border-radius: 20px;
+    }
+
+    .menu_open a{
+        margin-top: 1em;
+    color: white;
+    background-color: #544528;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 2em;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
+    font-family: 'pixel';
+    text-align: left;
+    }
+
+    .menu_open button{
+        background-color: #544528;
+        border-radius: 20px;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu_open button img{
+        height: 40px;
+    }
+
+    .menu_open a:hover{
+    transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 433px) and (max-width: 1025px){
+    .sand video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .sand img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .floating-button{
+        height: 80px;
+        width: 80px;
+    }
+
+    .menu_open{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .menu_open a{
+        font-size: 3em;
+    }
+
+    .shade{
+        width: 85%;
+    }
+
+    .shade nav{
+        display: none;
+    }
+
+    .apresentacao{
+        width: 100%;
+    }
+
+    .cinema{
+        width: 100%;
+    }
+
+    .cinema video{
+        height: auto;
+        width: 100%;
+    }
+
+    .fraseImpacto{
+        font-size: 2em;
+    }
+
+    .politicas h2{
+        padding-inline: 2em;
+    }
+
+    .floating-button{
+        display: block;
+    }
+
+
+    .menu_open{
+        display: none;
+    }
+    .menu_open img{
+        border-radius: 20px;
+    }
+
+    .menu_open a{
+        margin-top: 1em;
+    color: white;
+    background-color: #544528;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 2em;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
+    font-family: 'pixel';
+    text-align: left;
+    }
+
+    .menu_open button{
+        background-color: #544528;
+        border-radius: 20px;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu_open button img{
+        height: 40px;
+    }
+
+    .menu_open a:hover{
+    transform: scale(1.1);
+    }
+
+}
