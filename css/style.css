@@ -280,6 +280,7 @@ nav button img:hover{
     padding-bottom: 3em;
     border-bottom: 3px solid #544528;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .historia .pagina{
