@@ -711,3 +711,8 @@ function goTotop(){
     let inicio = document.getElementById("inicio")
     inicio.scrollIntoView({'behavior': 'smooth', 'block': 'end'})
 }
+
+function baixarApp(){
+    playClick()
+    window.open('https://github.com/malvesbruno/Bang-/releases/download/v1.1.0/bang.v1.1.0.apk')
+}

@@ -456,10 +456,12 @@ nav button img:hover{
 }
 
 .floating-button.scrollspy button {
+    margin-top: 1em;
   background: #5c5c5c66;
   backdrop-filter: blur(10px);
   color: white;
   font-size: 1em;
+  opacity: 0;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -485,6 +487,8 @@ nav button img:hover{
 }
 
 .floating-button button {
+    margin-bottom: 1em;
+    margin-right: 0.3em;
   background: #544528;
   color: white;
   font-size: 2em;
