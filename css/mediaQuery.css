@@ -1,4 +1,8 @@
 @media screen and (max-width: 360px) {
+    html{
+        overflow-x:unset;
+    }
+
     .shade{
         width: 100%;
     }
@@ -8,11 +12,16 @@
     }
 
     .cinema{
-        width: 100%;
+        width: 90%;
+    }
+
+    .quadro{
+        width: 200px;
+        height: 200px;
     }
 
     .cinema video{
-        height: 300px;
+        height: 200px;
         width: auto;
     }
 
@@ -87,12 +96,19 @@
         display: none;
     }
 
+    
+
     .cinema{
-        width: 100%;
+        width: 80%;
+    }
+
+    .quadro{
+        width: 200px;
+        height: 200px;
     }
 
     .cinema video{
-        height: 300px;
+        height: 200px;
         width: auto;
     }
 
@@ -153,13 +169,13 @@
 @media screen and (min-width: 433px) and (max-width: 1025px){
     .sand video{
         height: 100%;
-        width: 100%;
+        width: 100vw;
         object-fit: cover;
     }
 
     .sand img{
         height: 100%;
-        width: 100%;
+        width: 100vw;
         object-fit: cover;
     }
 
@@ -186,11 +202,16 @@
     }
 
     .apresentacao{
-        width: 100%;
+        width: 100vw;
     }
 
     .cinema{
-        width: 100%;
+        width: 90%;
+    }
+
+    .quadro{
+        width: 200px;
+        height: 200px;
     }
 
     .cinema video{

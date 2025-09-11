@@ -3,6 +3,10 @@
     src: url('../assets/fonts/ari-w9500.ttf');
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -47,7 +51,7 @@ video{
 
 .sand{
     height: 100%;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -275,6 +279,7 @@ nav button img:hover{
     width: 95%;
     padding-bottom: 3em;
     border-bottom: 3px solid #544528;
+    overflow: auto;
 }
 
 .historia .pagina{
@@ -418,7 +423,7 @@ nav button img:hover{
 
 .floating-button {
   position: fixed;
-  bottom: 20px;  /* distância do rodapé */
+  bottom: 40px;  /* distância do rodapé */
   right: 20px;   /* distância da lateral */
   z-index: 9999;
   display: none; /* padrão: escondido */
