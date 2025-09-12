@@ -530,7 +530,7 @@ No horizonte, Estrela Veloz corria à frente de seu irmão, atirando e levantand
 
 O Homem sem Nome dispara montado, seu cavalo galopando em direção a Blackwell. As ruas de Monadnock ainda cheiram a pólvora e poeira, ecos de uma batalha que parecia não ter fim. O magnata observa o pistoleiro se aproximar, com um sorriso frio, calculista, como se estivesse em um teatro de poder.
 
-Dois tiros ecoam. O corpo do cavaleiro é arremessado ao chão, terra e sangue se misturando. Sangrando, ele rasteja pela terra seca, cada movimento marcado pela dor. Blackwell se aproxima, elegante, como se desfilasse em um salão de baile, não em um campo de batalha.
+Dois tiros ecoam. O corpo do cavaleiro é arremessado ao chão, terra e sangue se misturando. Sangrando, ele rasteja pela terra seca, entre os escombros de uma barricada de dois andares que a cidade erguera em desespero. O fogo se espalhava pelas tábuas, formando um arco de chamas e cinzas diante dele — um portal sombrio que simbolizava o sofrimento de Monadnock. Blackwell se aproxima, elegante, como se desfilasse em um salão de baile, não em um campo de batalha.
 
 — “Tudo isso… pra morrer assim.” — a voz dele é um sussurro venenoso. — “Que decepção. Chega a ser… irônico.”
 
