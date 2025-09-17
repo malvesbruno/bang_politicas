@@ -601,8 +601,6 @@ function escrever() {
 const observerHistory = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            pre.textContent = '';
-            i = 0;
             isWriting = true;
             escrever();
         } else {
