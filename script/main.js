@@ -174,7 +174,7 @@ Ele ergue os olhos para ela, ainda cansado.
 Ele estreita os olhos.
 — … Como você sabe?
 
-— Por favor. Você achou que eu não notaria? Quando falou que “eles estão piorando”?
+— Por favor. Você achou que eu não notaria? Quando o ódio quando citei o nome dele?
 
 Um leve sorriso nasce no rosto do forasteiro.
 — Sagaz, anjo. E qual é a proposta?
@@ -585,6 +585,7 @@ let typewriterTimeout;
 let isWriting = false;
 
 const typewrite = document.getElementById('typewrite'); // seu áudio
+const pagina = document.getElementById('historiaScroll');
 
 function escrever() {
     if (!isWriting) return; // se estiver pausado, não continua
@@ -595,7 +596,12 @@ function escrever() {
         pre.textContent += texto[i];
         i++;
         typewriterTimeout = setTimeout(escrever, 50); // agenda próxima letra
+        pagina.scrollTop = pagina.scrollHeight
     }
+}
+
+function scrollToBottom() {
+  pagina.scrollTop = pagina.scrollHeight;
 }
 
 const observerHistory = new IntersectionObserver((entries) => {
@@ -603,13 +609,14 @@ const observerHistory = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             isWriting = true;
             escrever();
+            scrollToBottom()
         } else {
             isWriting = false;
             clearTimeout(typewriterTimeout); // cancela o próximo passo
             typewrite.pause(); // pausa o som
         }
     });
-}, { threshold: 0.8 });
+}, { threshold: 0});
 
 observerHistory.observe(pre);
 

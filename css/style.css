@@ -296,9 +296,9 @@ nav button img:hover{
 }
 
 .historia .pagina{
-    height: 100vh;
+    height: 50vh;
     width: 100%;
-    overflow-y: auto;
+    overflow-y:scroll !important;
     overflow-x: hidden;
     border-radius: 10px;
     padding: 1em;
