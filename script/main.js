@@ -227,7 +227,7 @@ O Homem sem Nome permanecia firme, o olhar fechado, tentando não se deixar afet
 Quando a última nota morreu no vento, o andarilho baixou o violão e agradeceu com um gesto simples.
 Então, sem aviso, começou a falar como se contasse uma lenda esquecida:
 
-— Havia um filho bastardo. Sangue do mesmo pai, mas coração livre. O pai, homem de ferro e petróleo, deu-lhe uma ordem. O filho desobedeceu. E o castigo foi a areia. O deserto. O abandono. O filho, deixado para morrer.
+— Nasceu fora dos laços esperados. Um homem forjado em ferro e combustível lhe lançou palavras como correntes. Ele quebrou uma delas. E, em resposta, veio a aridez. A vastidão silenciosa. O esquecimento.
 
 O Homem sem Nome, de repente, endureceu o rosto.
 Olhou para o andarilho com fúria contida, como se aquelas palavras fossem uma ferida aberta.
