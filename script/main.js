@@ -174,7 +174,7 @@ Ele ergue os olhos para ela, ainda cansado.
 Ele estreita os olhos.
 — … Como você sabe?
 
-— Por favor. Você achou que eu não notaria? Quando o ódio quando citei o nome dele?
+— Por favor. Você achou que eu não notaria? O ódio quando citei o nome dele?
 
 Um leve sorriso nasce no rosto do forasteiro.
 — Sagaz, anjo. E qual é a proposta?
